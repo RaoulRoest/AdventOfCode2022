@@ -26,7 +26,7 @@ namespace AdventCalendar.Console.Questions
             _fileReaderFactory = fileReaderFactory;
         }
 
-        public override async Task<int> GetFirstAnswer()
+        public override async Task<object> GetFirstAnswer()
         {
             var filePath = GetFilePath();
             return await _reader.ReadFileAsync(filePath)
@@ -35,7 +35,7 @@ namespace AdventCalendar.Console.Questions
                 .SumAsync();
         }
 
-        public override async Task<int> GetSecondAnswer()
+        public override async Task<object> GetSecondAnswer()
         {
             var filePath = GetFilePath();
             var fileReader = _fileReaderFactory.GetNCollectionFileReader(3);

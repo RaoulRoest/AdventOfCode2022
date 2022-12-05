@@ -13,7 +13,7 @@ namespace AdventCalendar.Console
             var serviceProvider = services.BuildServiceProvider();
 
             var adventQuestionGuru = serviceProvider.GetRequiredService<IGuru>();
-            await adventQuestionGuru.Go(4);
+            await adventQuestionGuru.Go(5);
         }
     }
 }

@@ -22,14 +22,14 @@ namespace AdventCalendar.Console.Questions
 
         public override int Number => 1;
 
-        public override async Task<int> GetFirstAnswer()
+        public override async Task<object> GetFirstAnswer()
         {
             var cumSums = await ComputeCumulativeElfLoads();
             var maxCalculator = _calculatorFactory.CreateCalculator(CalculatorType.Maximum);
             return maxCalculator.Calculate(cumSums);
         }
 
-        public override async Task<int> GetSecondAnswer()
+        public override async Task<object> GetSecondAnswer()
         {
             var cumSums = await ComputeCumulativeElfLoads();
             return cumSums.OrderByDescending(x => x).Take(3).Sum();

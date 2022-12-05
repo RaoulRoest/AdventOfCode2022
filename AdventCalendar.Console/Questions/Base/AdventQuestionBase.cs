@@ -5,8 +5,8 @@ namespace AdventCalendar.Console.Questions.Base
     public abstract class AdventQuestionBase : IAdventQuestion
     {
         public abstract int Number { get; }
-        public abstract Task<int> GetFirstAnswer();
-        public abstract Task<int> GetSecondAnswer();
+        public abstract Task<object> GetFirstAnswer();
+        public abstract Task<object> GetSecondAnswer();
 
         protected string GetFilePath()
         {

@@ -19,7 +19,7 @@ namespace AdventCalendar.Console.Questions
             _duoMapper = duoMapper;
         }
 
-        public override async Task<int> GetFirstAnswer()
+        public override async Task<object> GetFirstAnswer()
         {
             var filePath = GetFilePath();
             return await _fileReader.ReadFileAsync(filePath)
@@ -28,7 +28,7 @@ namespace AdventCalendar.Console.Questions
                 .CountAsync();
         }
 
-        public override async Task<int> GetSecondAnswer()
+        public override async Task<object> GetSecondAnswer()
         {
             var filePath = GetFilePath();
             return await _fileReader.ReadFileAsync(filePath)

@@ -19,13 +19,13 @@ namespace AdventCalendar.Console.Questions
             _gameMapperFactory = gameMapperFactory;
         }
 
-        public override async Task<int> GetFirstAnswer()
+        public override async Task<object> GetFirstAnswer()
         {
             var mapper = _gameMapperFactory.Create(InputOrientation.Hand);
             return await ComputeScore(mapper);
         }
 
-        public override async Task<int> GetSecondAnswer()
+        public override async Task<object> GetSecondAnswer()
         {
             var mapper = _gameMapperFactory.Create(InputOrientation.GameState);
             return await ComputeScore(mapper);

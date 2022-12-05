@@ -4,7 +4,7 @@
     {
         public int Number { get; }
 
-        Task<int> GetFirstAnswer();
-        Task<int> GetSecondAnswer();
+        Task<object> GetFirstAnswer();
+        Task<object> GetSecondAnswer();
     }
 }
