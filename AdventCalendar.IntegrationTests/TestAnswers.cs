@@ -23,7 +23,8 @@ namespace AdventCalendar.IntegrationTests
         [InlineData(2, 14264, 12382)]
         [InlineData(3, 7793, 2499)]
         [InlineData(4, 651, 956)]
-        public async void Test1(int day, int firstExpected, int secondExpected)
+        [InlineData(5, "QNHWJVJZW", "BPCZJLFJW")]
+        public async void Test1(int day, object firstExpected, object secondExpected)
         {
             // Arrange
             var question = AdventQuestionFactory.CreateQuestion(day);
